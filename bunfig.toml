@@ -1,0 +1,9 @@
+[install]
+lockfile = "bun.lockb"
+
+[run]
+bun = true
+shell = "bun"
+
+[test]
+bun = true
