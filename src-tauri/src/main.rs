@@ -1,5 +1,4 @@
 mod commands;
-mod video;
 
 fn main() {
   tauri::Builder::default()

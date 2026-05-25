@@ -5,18 +5,22 @@ type IconButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
 };
 
 const tones = {
-  ember: "bg-ember-100 text-ember-600 hover:bg-ember-200",
-  tide: "bg-tide-100 text-tide-700 hover:bg-tide-200",
-  slate: "bg-slate-100 text-slate-600 hover:bg-slate-200"
+  ember: "bg-ember-900/40 text-ember-400 hover:bg-ember-800/60 hover:text-ember-300",
+  tide: "bg-tide-900/40 text-tide-400 hover:bg-tide-800/60 hover:text-tide-300",
+  slate: "bg-slate-800/40 text-slate-400 hover:bg-slate-700/60 hover:text-slate-300",
 };
 
-export default function IconButton({ tone = "slate", className, ...rest }: IconButtonProps) {
+export default function IconButton({
+  tone = "slate",
+  className,
+  ...rest
+}: IconButtonProps) {
   return (
     <button
       className={cn(
-        "h-9 w-9 rounded-full transition flex items-center justify-center",
+        "flex h-9 w-9 items-center justify-center rounded-full transition-all duration-200",
         tones[tone],
-        className
+        className,
       )}
       {...rest}
     />

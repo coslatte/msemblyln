@@ -1,6 +1,7 @@
 use std::env;
 
-use video::{render, RenderRequest};
+use msemblyln_core::types::RenderRequest;
+use msemblyln_core::video::render;
 
 fn main() {
   let args: Vec<String> = env::args().collect();
@@ -56,7 +57,7 @@ fn main() {
         print_usage();
         return;
       }
-      _ => index += 1
+      _ => index += 1,
     }
   }
 
@@ -80,7 +81,7 @@ fn main() {
     height,
     fps,
     format: "mp4".into(),
-    crf: Some(18)
+    crf: Some(18),
   };
 
   match render(request) {

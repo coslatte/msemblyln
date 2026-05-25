@@ -5,5 +5,5 @@
     "moduleResolution": "Bundler",
     "types": ["node"]
   },
-  "include": ["vite.config.ts", "tailwind.config.ts", "postcss.config.cjs"]
+  "include": ["vite.config.ts", "vite-plugin-backend.ts", "server/backend.ts", "tailwind.config.ts", "postcss.config.cjs"]
 }

@@ -5,16 +5,24 @@ type OutputPanelProps = {
   command: string | null;
 };
 
-export default function OutputPanel({ outputPath, command }: OutputPanelProps) {
+export default function OutputPanel({
+  outputPath,
+  command,
+}: OutputPanelProps) {
   return (
-    <Card variant="soft" className="space-y-3">
-      <p className="font-display text-lg font-semibold text-slate-800">Last render</p>
-      <div className="space-y-2 text-sm text-slate-600">
+    <Card variant="soft" className="space-y-3 animate-slide-up">
+      <p className="font-display text-lg font-semibold text-slate-200">
+        Last render
+      </p>
+      <div className="space-y-2 text-sm text-slate-400">
         <p>
-          Output: <span className="font-semibold text-slate-700">{outputPath || "-"}</span>
+          Output:{" "}
+          <span className="font-semibold text-tide-400">
+            {outputPath || "-"}
+          </span>
         </p>
-        <p className="text-xs text-slate-400">FFmpeg command</p>
-        <code className="block whitespace-pre-wrap rounded-2xl bg-slate-950/95 p-3 text-xs text-slate-100">
+        <p className="text-xs text-slate-600">FFmpeg command</p>
+        <code className="block whitespace-pre-wrap rounded-2xl bg-black/50 p-3 text-xs text-slate-300">
           {command || "-"}
         </code>
       </div>

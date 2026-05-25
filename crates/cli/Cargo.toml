@@ -1,0 +1,7 @@
+[package]
+name = "msemblyln-cli"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+msemblyln-core = { path = "../core" }
